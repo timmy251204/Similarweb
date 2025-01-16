@@ -1,0 +1,19 @@
+
+
+services:
+  app:
+    build:
+      context: .
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/balmy-virtue-441403-h4-e2a2d96cd37b.json
+      - LOGIN_SESSION_PATH=/app/credentials/login_session.json
+      - DISPLAY=:0
+    volumes:
+      - ./balmy-virtue-441403-h4-e2a2d96cd37b.json:/app/credentials/balmy-virtue-441403-h4-e2a2d96cd37b.json
+      - ./login_session.json:/app/credentials/login_session.json
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    ports:
+      - "5001:5000"
+    tty: true
+

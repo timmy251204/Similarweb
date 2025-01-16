@@ -1,0 +1,5 @@
+.env
+balmy-virtue-441403-h4-e2a2d96cd37b.json
+login_session.json
+__pycache__/
+*.pyc
